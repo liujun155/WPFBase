@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="WPF路由事件.CtrlBubblingRouting"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF路由事件"
+             mc:Ignorable="d" 
+             d:DesignHeight="250" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Style x:Key="cuStyle" TargetType="{x:Type FrameworkElement}">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0 30"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="Red" ButtonBase.Click="Button_Click">
+        <Border Background="Blue" Margin="20" ButtonBase.Click="Button_Click">
+            <StackPanel Background="Yellow" Margin="20" VerticalAlignment="Center" ButtonBase.Click="Button_Click">
+                <TextBlock Style="{StaticResource cuStyle}">我是一个冒泡路由事件</TextBlock>
+                <Button Style="{StaticResource cuStyle}" Click="Button_Click">点击我触发</Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

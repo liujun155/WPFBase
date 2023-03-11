@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF复习", "WPF复习\WPF复习.csproj", "{7C499370-918A-4BA8-9B87-2A1AAE8C53CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControlLibrary", "CustomControlLibrary\CustomControlLibrary.csproj", "{BF942D07-CA40-4C8D-916E-F6BF6B016666}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF路由事件", "WPF路由事件\WPF路由事件.csproj", "{7F5D0232-EB2E-437D-B4BD-00574D0C109B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF动画", "WPF动画\WPF动画.csproj", "{DCD5DFF2-FFCA-42A2-A6CC-A307229AA7EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF触发器", "WPF触发器\WPF触发器.csproj", "{724781AF-CAA7-48DA-BA9F-33CE881ECB3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF模板", "WPF模板\WPF模板.csproj", "{44C33E12-F85F-4BAE-81AC-99556DAA825C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C499370-918A-4BA8-9B87-2A1AAE8C53CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C499370-918A-4BA8-9B87-2A1AAE8C53CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C499370-918A-4BA8-9B87-2A1AAE8C53CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C499370-918A-4BA8-9B87-2A1AAE8C53CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF942D07-CA40-4C8D-916E-F6BF6B016666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF942D07-CA40-4C8D-916E-F6BF6B016666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF942D07-CA40-4C8D-916E-F6BF6B016666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF942D07-CA40-4C8D-916E-F6BF6B016666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F5D0232-EB2E-437D-B4BD-00574D0C109B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F5D0232-EB2E-437D-B4BD-00574D0C109B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F5D0232-EB2E-437D-B4BD-00574D0C109B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F5D0232-EB2E-437D-B4BD-00574D0C109B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCD5DFF2-FFCA-42A2-A6CC-A307229AA7EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCD5DFF2-FFCA-42A2-A6CC-A307229AA7EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCD5DFF2-FFCA-42A2-A6CC-A307229AA7EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCD5DFF2-FFCA-42A2-A6CC-A307229AA7EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{724781AF-CAA7-48DA-BA9F-33CE881ECB3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{724781AF-CAA7-48DA-BA9F-33CE881ECB3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{724781AF-CAA7-48DA-BA9F-33CE881ECB3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{724781AF-CAA7-48DA-BA9F-33CE881ECB3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44C33E12-F85F-4BAE-81AC-99556DAA825C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44C33E12-F85F-4BAE-81AC-99556DAA825C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44C33E12-F85F-4BAE-81AC-99556DAA825C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44C33E12-F85F-4BAE-81AC-99556DAA825C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {209705AF-1D64-481A-BBA6-C5C8DB61B3AF}
+	EndGlobalSection
+EndGlobal

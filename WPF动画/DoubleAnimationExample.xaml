@@ -1,0 +1,76 @@
+﻿<Window x:Class="WPF动画.DoubleAnimationExample"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF动画"
+        x:Name="daW"
+        mc:Ignorable="d"
+        Title="DoubleAnimationExample" Height="320" Width="400">
+    <Window.Resources>
+        <Storyboard x:Key="BtnAnimation">
+            <DoubleAnimation From="60" To="200" Duration="0:0:2" Storyboard.TargetProperty="Width"/>
+        </Storyboard>
+    </Window.Resources>
+    <Canvas x:Name="cvs">
+        <Button Width="60" Height="60" HorizontalAlignment="Left" VerticalAlignment="Top" Content="移动"
+                Click="Button_Click">
+            <Button.RenderTransform>
+                <TranslateTransform x:Name="tt" X="30" Y="30"></TranslateTransform>
+            </Button.RenderTransform>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Style.Triggers>
+                        <EventTrigger RoutedEvent="Click">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation To="200" Duration="0:0:2" AccelerationRatio="0.1" DecelerationRatio="0.25"
+                                                     Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)"/>
+                                    <DoubleAnimation To="200" Duration="0:0:2" AccelerationRatio="0.1" DecelerationRatio="0.25"
+                                                     Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)"/>
+                                    <DoubleAnimation To="30" Duration="0:0:2" AccelerationRatio="0.1" DecelerationRatio="0.25"
+                                                     Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)"
+                                                     BeginTime="0:0:2"/>
+                                    <DoubleAnimation To="30" Duration="0:0:2" AccelerationRatio="0.1" DecelerationRatio="0.25"
+                                                     Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)"
+                                                     BeginTime="0:0:2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        
+        <Button Width="60" Height="60" Content="扩宽" Canvas.Top="30" Canvas.Left="150">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation To="200" Duration="0:0:2" AccelerationRatio="0.2" DecelerationRatio="0.2"
+                                             Storyboard.TargetProperty="Width" AutoReverse="True"/>
+                            <!--设置AutoReverse动画结束后自动反顺序播放动画-->
+                            <!--<DoubleAnimation To="60" Duration="0:0:2" AccelerationRatio="0.2" DecelerationRatio="0.2"
+                                             Storyboard.TargetProperty="Width" BeginTime="0:0:2"/>-->
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        
+        <!--闪烁-->
+        <Ellipse Width="20" Height="20" Fill="Red" Canvas.Left="280" Canvas.Top="50">
+            <Ellipse.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation To="0" Duration="0:0:1.5" Storyboard.TargetProperty="Opacity" AutoReverse="True" 
+                                             RepeatBehavior="Forever"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Ellipse.Triggers>
+        </Ellipse>
+        
+    </Canvas>
+</Window>

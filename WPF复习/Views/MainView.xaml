@@ -1,0 +1,17 @@
+﻿<Window x:Class="WPF复习.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF复习"
+        xmlns:cusCtrlLib="clr-namespace:CustomControlLibrary;assembly=CustomControlLibrary"
+        mc:Ignorable="d"
+        Title="MainView" Height="450" Width="800">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="{Binding ClickCount}"></TextBlock>
+            <Button Command="{Binding MyCommand}" Content="点击我改变"></Button>
+            <cusCtrlLib:DevButton DevName="我是自定义控件" DevStatus="1"></cusCtrlLib:DevButton>
+        </StackPanel>
+    </Grid>
+</Window>
