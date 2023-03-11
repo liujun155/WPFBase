@@ -14,7 +14,7 @@
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
                             <Rectangle Margin="1" x:Name="statusLed" Fill="{TemplateBinding StatusBrush}"/>
-                            <Button Grid.Column="1" x:Name="devBtn" Content="{TemplateBinding DevName}"/>
+                            <Button Grid.Column="1" x:Name="devBtn" Command="{TemplateBinding Command}" Content="{TemplateBinding DevName}"/>
                         </Grid>
                     </Border>
                 </ControlTemplate>

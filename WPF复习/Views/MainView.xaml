@@ -11,7 +11,7 @@
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Text="{Binding ClickCount}"></TextBlock>
             <Button Command="{Binding MyCommand}" Content="点击我改变"></Button>
-            <cusCtrlLib:DevButton DevName="我是自定义控件" DevStatus="1"></cusCtrlLib:DevButton>
+            <cusCtrlLib:DevButton DevName="我是自定义控件" Command="{Binding CtrlCommand}" DevStatus="1"></cusCtrlLib:DevButton>
         </StackPanel>
     </Grid>
 </Window>

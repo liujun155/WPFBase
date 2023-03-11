@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
@@ -34,9 +35,10 @@ namespace CustomControlLibrary
 
         private void DevBtn_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(DevName);
+            MessageBox.Show(DevName, "提示");
         }
 
+        #region 依赖属性
         public string DevName
         {
             get { return (string)GetValue(DevNameProperty); }
@@ -81,5 +83,39 @@ namespace CustomControlLibrary
         // Using a DependencyProperty as the backing store for StatusBrush.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty StatusBrushProperty =
             DependencyProperty.Register("StatusBrush", typeof(Brush), typeof(DevButton), new FrameworkPropertyMetadata(Brushes.LightGray));
+
+
+        // 给button添加命令依赖属性
+        public static readonly DependencyProperty CommandProperty =
+        DependencyProperty.Register("Command", typeof(ICommand), typeof(DevButton), new PropertyMetadata(null, OnCommandChanged));
+
+        public ICommand Command
+        {
+            get { return (ICommand)GetValue(CommandProperty); }
+            set { SetValue(CommandProperty, value); }
+        }
+
+        private static void OnCommandChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            DevButton control = d as DevButton;
+            ICommand oldCommand = e.OldValue as ICommand;
+            ICommand newCommand = e.NewValue as ICommand;
+
+            if (oldCommand != null)
+            {
+                oldCommand.CanExecuteChanged -= control.OnCanExecuteChanged;
+            }
+
+            if (newCommand != null)
+            {
+                newCommand.CanExecuteChanged += control.OnCanExecuteChanged;
+            }
+        }
+
+        private void OnCanExecuteChanged(object sender, EventArgs e)
+        {
+            CommandManager.InvalidateRequerySuggested();
+        }
+        #endregion
     }
 }

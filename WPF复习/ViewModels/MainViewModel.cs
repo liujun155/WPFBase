@@ -39,6 +39,25 @@ namespace WPF复习
 			}
 		}
 
+		private ICommand _ctrlCommand;
+
+		public ICommand CtrlCommand
+        {
+			get
+            {
+                if (_ctrlCommand == null)
+                {
+                    _ctrlCommand = new RelayCommand(CusCtrlClick);
+                }
+                return _ctrlCommand;
+            }
+		}
+
+        private void CusCtrlClick(object obj)
+        {
+			MessageBox.Show("我通过命令执行", "提示");
+        }
+
         public MainViewModel()
 		{
 
