@@ -114,6 +114,9 @@ namespace CustomControlLibrary
 
         private void OnCanExecuteChanged(object sender, EventArgs e)
         {
+            // 通知命令系统重新评估所有命令的可执行状态，并更新它们的 CanExecute 属性。
+            // 当某些操作可能会影响命令的可执行状态时，可以调用此方法来触发命令系统的重新评估。
+            // 方法被调用时，命令系统将重新调用所有的命令的 CanExecuteChanged 事件，以便更新命令的可执行状态。
             CommandManager.InvalidateRequerySuggested();
         }
         #endregion
