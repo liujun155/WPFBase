@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DCD5DFF2-FFCA-42A2-A6CC-A307229AA7EF}</ProjectGuid>
+    <ProjectGuid>{E1989976-4854-443A-96BF-7EDE661D43E4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WPF动画</RootNamespace>
-    <AssemblyName>WPF动画</AssemblyName>
+    <RootNamespace>WPF依赖属性附加属性</RootNamespace>
+    <AssemblyName>WPF依赖属性附加属性</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,23 +55,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ColorAnimationExample.xaml.cs">
-      <DependentUpon>ColorAnimationExample.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ObjectAnimationUsingKeyFramesExample.xaml.cs">
-      <DependentUpon>ObjectAnimationUsingKeyFramesExample.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SidebarAnimationExample.xaml.cs">
-      <DependentUpon>SidebarAnimationExample.xaml</DependentUpon>
-    </Compile>
-    <Page Include="ColorAnimationExample.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="DoubleAnimationExample.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -80,21 +63,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DoubleAnimationExample.xaml.cs">
-      <DependentUpon>DoubleAnimationExample.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ObjectAnimationUsingKeyFramesExample.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="SidebarAnimationExample.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

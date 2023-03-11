@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF触发器", "WPF触发�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF模板", "WPF模板\WPF模板.csproj", "{44C33E12-F85F-4BAE-81AC-99556DAA825C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF依赖属性附加属性", "WPF依赖属性附加属性\WPF依赖属性附加属性.csproj", "{E1989976-4854-443A-96BF-7EDE661D43E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{44C33E12-F85F-4BAE-81AC-99556DAA825C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44C33E12-F85F-4BAE-81AC-99556DAA825C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44C33E12-F85F-4BAE-81AC-99556DAA825C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1989976-4854-443A-96BF-7EDE661D43E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1989976-4854-443A-96BF-7EDE661D43E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1989976-4854-443A-96BF-7EDE661D43E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1989976-4854-443A-96BF-7EDE661D43E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

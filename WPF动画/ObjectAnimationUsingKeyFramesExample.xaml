@@ -1,0 +1,34 @@
+﻿<Window x:Class="WPF动画.ObjectAnimationUsingKeyFramesExample"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF动画"
+        mc:Ignorable="d"
+        Title="ObjectAnimationUsingKeyFramesExample" Height="320" Width="400">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock x:Name="myTextBlock" Text="Hello" FontSize="20">
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard RepeatBehavior="Forever" AutoReverse="True">
+                                <ObjectAnimationUsingKeyFrames
+                            Storyboard.TargetName="myTextBlock"
+                            Storyboard.TargetProperty="Text"
+                            Duration="0:0:6">
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="" />
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="H" />
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:2" Value="He" />
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:3" Value="Hel" />
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:4" Value="Hell" />
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:5" Value="Hello" />
+                                </ObjectAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

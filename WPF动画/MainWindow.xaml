@@ -16,6 +16,7 @@
     <UniformGrid Rows="2" Columns="3">
         <Button Content="DoubleAnimation" Click="Button_Click"/>
         <Button Content="ColorAnimation" Click="Button_Click"/>
+        <Button Content="ObjectAnimationUsingKeyFrames" Click="Button_Click"/>
         <Button Content="SidebarAnimation" Click="Button_Click"/>
     </UniformGrid>
 </Window>
