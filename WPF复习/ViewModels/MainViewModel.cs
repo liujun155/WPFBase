@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using WPF复习;
 
 namespace WPF复习
 {
@@ -52,6 +53,24 @@ namespace WPF复习
                 return _ctrlCommand;
             }
 		}
+
+		private ICommand _showBigDataGridCommand;
+
+		public ICommand ShowBigDataGridCommand
+        {
+			get 
+			{
+				if (_showBigDataGridCommand == null)
+                    _showBigDataGridCommand = new RelayCommand(ShowBigDataGrid);
+				return _showBigDataGridCommand;
+			}
+		}
+
+        private void ShowBigDataGrid(object obj)
+        {
+			BigDataGridView bigDataGridView = new BigDataGridView();
+			bigDataGridView.ShowDialog();
+        }
 
         private void CusCtrlClick(object obj)
         {

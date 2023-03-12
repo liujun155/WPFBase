@@ -11,7 +11,8 @@
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Text="{Binding ClickCount}"></TextBlock>
             <Button Command="{Binding MyCommand}" Content="点击我改变"></Button>
-            <cusCtrlLib:DevButton DevName="我是自定义控件" Command="{Binding CtrlCommand}" DevStatus="1"></cusCtrlLib:DevButton>
+            <cusCtrlLib:DevButton DevName="我是自定义控件" Command="{Binding CtrlCommand}" DevStatus="1" Margin="0 10"></cusCtrlLib:DevButton>
+            <Button Height="30" Padding="10 0" Command="{Binding ShowBigDataGridCommand}">一个大数据异步加载的DataGrid</Button>
         </StackPanel>
     </Grid>
 </Window>
